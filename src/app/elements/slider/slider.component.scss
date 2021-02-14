@@ -1,0 +1,50 @@
+@import "src/assets/styles/fonts";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/bootstrap-overrides";
+@import "src/assets/styles/bootstrap-dependencies";
+
+.app-header-slider {
+  .text-slider {
+    z-index: 999999;
+    .image-background {
+      display: none;
+    }
+    @include media-breakpoint-down(sm) {
+    .title-slider {
+      z-index: 999999;
+        text-align: center;
+        font-size: 1.6rem !important;
+        line-height: 2.5rem !important;
+      }
+      .btn-slider {
+        text-align: center;
+        margin-bottom: 30px;
+        .btn {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+      }
+      .image-background {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        &.image-1 {
+          top: 0;
+          left: 28px;
+        }
+        &.image-2 {
+          top: 83px;
+          left: 59px;
+        }
+        &.image-3 {
+          top: 0;
+          left: 221px;
+        }
+        &.image-4 {
+          top: 44px;
+          right: 19px;
+        }
+      }
+    }
+  }
+}

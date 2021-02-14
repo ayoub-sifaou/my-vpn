@@ -1,0 +1,64 @@
+@import "variables";
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: ($spacer * .75),
+  4: ($spacer * 1),
+  5: ($spacer * 1.5),
+  6: ($spacer * 3)
+);
+$primary: #002d74;
+$secondary: #3dae2b;
+$third-color: #4197cb;
+$blue-light: #90C4E1;
+$yellow: #FFB758;
+$red: #F53D3D;
+$blue: #3C97CB;
+$theme-colors: (
+  "lighterGray":#F6F6F6,
+  "lightGray": #AFB5C0,
+  "softGray": #ECECEC,
+  "darkGray":#8A8A8A,
+  "darkerGray": $gray-color,
+  "gray": $gray-color,
+  "nevada":#606a71,
+  "second-color": $second-color,
+  "darker-gray": #4D4D4D,
+  "black": #0B132A,
+  "black-text-color": #4F5665,
+);
+$body-bg: #ECECEC;
+$lighterGray: map_get($theme-colors, "lighterGray");
+$lightGray: map_get($theme-colors, "lightGray");
+$darkGray: map_get($theme-colors, "darkGray");
+$darker-gray: map_get($theme-colors, "darker-gray");
+$darkerGray: map_get($theme-colors, "darkerGray");
+$softGray: map_get($theme-colors, "softGray");
+$gray: map_get($theme-colors, "gray");
+$nevada: map_get($theme-colors, "nevada");
+$second-color: map_get($theme-colors, "second-color");
+$gray-bg: map_get($theme-colors, "gray-bg");
+$text-black: map_get($theme-colors, "black");
+$black-text-color: map_get($theme-colors, 'black-text-color');
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1400px,
+  xl: 1600,
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1400px,
+  xxl: 1600px
+);
+$primary : #F53838;
+$secondary: #2FAB73;
+$btn-border-radius: 10px;
+$btn-border-width: 2px;

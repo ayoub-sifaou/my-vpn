@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global styles and import other style files */
+@import "assets/styles/fonts";
+@import "assets/fonts/examan-font/style.css";
+@import "assets/styles/variables";
+@import "assets/styles/bootstrap-overrides";
+@import "assets/styles/bootstrap-dependencies";
+
+body {
+  font-family: $rubik-regular;
+  background: $white;
+  color: $black-text-color;
+}
+
+.mt-10 {
+  margin-top: 6rem !important;
+}
+
+.px-6 {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+.px-7 {
+  padding-left: 3.5rem !important;
+  padding-right: 3.5rem !important;
+}
+
+.btn-transparont {
+  background: transparent !important;
+  border-radius: 50px !important;
+  border: 2px solid $primary !important;
+  color: $primary !important;
+  padding: 5px 20px;
+  box-sizing: border-box !important;
+  &.active {
+    background: $primary !important;
+    color: $white !important;
+  }
+}
+
+.box-sho-button-primary {
+  box-shadow: 0 23px 20px rgba(245, 56, 56, 0.27);
+}
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

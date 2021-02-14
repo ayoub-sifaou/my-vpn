@@ -1,0 +1,45 @@
+@import "src/assets/styles/fonts";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/bootstrap-overrides";
+@import "src/assets/styles/bootstrap-dependencies";
+
+.activie-number {
+  box-shadow: 0 23px 20px rgba(13, 16, 37, 0.12);
+  .activite {
+    &:not(:last-child) {
+      border-right: 2px solid #EEEFF2;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    box-shadow: none;
+    .activite {
+      border-right: none !important;
+      box-shadow: 0 23px 20px rgba(13, 16, 37, 0.12);
+      margin: 30px 100px 0 100px;
+      border: 1px solid rgba(0, 0, 0, 0.125) !important;
+      border-radius: 10px;
+      padding: 30px 0;
+      display: block !important;
+      text-align: center;
+      .icon-border {
+        margin-right: 0;
+        padding: 30px;
+        border-radius: 45px;
+        margin-bottom: 15px;
+      }
+      .number {
+        margin-top: 30px;
+      }
+    }
+    .card {
+      border: none;
+      padding-top: 0 !important;
+    }
+  }
+}
+.icon-border {
+  background: #FFECEC;
+  border-radius: 20px;
+  padding:15px;
+  margin-right: 20px;
+}
