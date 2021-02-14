@@ -43,21 +43,6 @@ $second-color: map_get($theme-colors, "second-color");
 $gray-bg: map_get($theme-colors, "gray-bg");
 $text-black: map_get($theme-colors, "black");
 $black-text-color: map_get($theme-colors, 'black-text-color');
-$breakpoints: (
-  xs: 576px,
-  sm: 768px,
-  md: 992px,
-  lg: 1400px,
-  xl: 1600,
-);
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1400px,
-  xxl: 1600px
-);
 $primary : #F53838;
 $secondary: #2FAB73;
 $btn-border-radius: 10px;

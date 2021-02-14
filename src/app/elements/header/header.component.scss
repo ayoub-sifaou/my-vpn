@@ -55,6 +55,11 @@
       }
     }
   }
+  @include media-breakpoint-down(md) {
+    .sign-in-up-header {
+      display: none !important;
+    }
+  }
 }
 
 .btn-sign {
@@ -66,7 +71,7 @@
   box-sizing: border-box !important;
 }
 
-@media (max-width: 992px) {
+@include media-breakpoint-down(md) {
   .navbar-collapse {
     position: fixed;
     top: 50px;
