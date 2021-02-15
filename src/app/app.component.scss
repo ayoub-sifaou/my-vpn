@@ -39,6 +39,9 @@
       border: 2px solid #DDDDDD !important;
       box-sizing: border-box !important;
       border-radius: 10px !important;
+      &.active {
+        border: 2px solid $primary !important;
+      }
     }
   }
   @include  media-breakpoint-down(sm){
