@@ -1,16 +1,22 @@
-.list-ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 15px;
-  li {
-    a {
-      color: #4F5665;
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/bootstrap-overrides';
+@import 'src/assets/styles/bootstrap-dependencies';
+
+.component-footer {
+  .list-ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+    li {
+      a {
+        color: #4F5665;
+      }
     }
-  }
-  .mr-49 {
-    margin-right: 49px;
-  }
-  .mr--8 {
-    margin-right: -8px;
+    .mr-49 {
+      margin-right: 49px;
+    }
+    .mr--8 {
+      margin-right: -8px;
+    }
   }
 }

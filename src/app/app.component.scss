@@ -2,74 +2,15 @@
 @import 'src/assets/styles/bootstrap-overrides';
 @import 'src/assets/styles/bootstrap-dependencies';
 
-.image-main {
-  width: 355px;
+.app-main {
+  padding-bottom: 150px;
+  @include  media-breakpoint-down(sm) {
+    padding-bottom: 30px;
+  }
 }
-.image-card {
-  padding: 70px;
-  padding-bottom: 30px;
-}
-
-.list-items-card {
-  padding-left: 50px;
-}
-
 .app-footer {
   padding-top: 150px !important;
   @include  media-breakpoint-down(sm){
     padding-top: 30px !important;
-  }
-}
-
-.app-main {
-  padding-bottom: 150px;
-  .card-main {
-    position: absolute;
-    width: 100%;
-    top: 60px;
-    box-shadow: 0 23px 20px rgba(13, 16, 37, 0.12) !important;
-  }
-  .main-text {
-      .image-background {
-        display: none;
-      }
-  }
-  .card-prix {
-    .card {
-      border: 2px solid #DDDDDD !important;
-      box-sizing: border-box !important;
-      border-radius: 10px !important;
-      &.active {
-        border: 2px solid $primary !important;
-      }
-    }
-  }
-  @include  media-breakpoint-down(sm){
-    padding-bottom: 30px;
-    .main-text {
-      .image-background {
-        position: absolute;
-        //z-index: -1;
-        display: block;
-        &.image-7 {
-          top: 10px;
-          left: 72px;
-        }
-        &.image-5 {
-          top: 196px;
-          right: 42px;
-        }
-        &.image-6 {
-          top: 251px;
-          left: -9px;
-        }
-      }
-      .main-title {
-        font-size: 2.1875rem !important;
-      }
-      .content-text-center {
-        text-align: center !important;
-      }
-    }
   }
 }
