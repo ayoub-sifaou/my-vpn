@@ -43,6 +43,12 @@
         }
       }
     }
+    .icon-navbar {
+      @include media-breakpoint-up(md){
+        position: absolute;
+        right: -180px;
+      }
+    }
     .icon-navbar[aria-expanded="true"] {
       display: none;
     }

@@ -7,8 +7,8 @@ import { FooterComponent } from './elements/footer/footer.component';
 import { HeaderComponent } from './elements/header/header.component';
 import { CountUpModule } from 'ngx-countup';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MainComponent } from './main/main.component';
-import { ComponentEvaluatedComponent } from './main/component-evaluated/component-evaluated.component';
+import { HomeComponent } from './home/home.component';
+import { ComponentEvaluatedComponent } from './home/component-evaluated/component-evaluated.component';
 import {SliderComponent} from './elements/header/slider/slider.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import {SliderComponent} from './elements/header/slider/slider.component';
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    MainComponent,
+    HomeComponent,
     ComponentEvaluatedComponent,
     SliderComponent,
   ],
