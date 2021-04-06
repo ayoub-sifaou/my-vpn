@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "exam-integration": {
+    "my-vpn": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/exam-integration",
+            "outputPath": "dist/my-vpn",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "exam-integration:build"
+            "browserTarget": "my-vpn:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "exam-integration:build:production"
+              "browserTarget": "my-vpn:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "exam-integration:build"
+            "browserTarget": "my-vpn:build"
           }
         },
         "test": {
@@ -124,16 +124,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "exam-integration:serve"
+            "devServerTarget": "my-vpn:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "exam-integration:serve:production"
+              "devServerTarget": "my-vpn:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "exam-integration"
+  "defaultProject": "my-vpn"
 }
