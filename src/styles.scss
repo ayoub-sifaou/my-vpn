@@ -1,3 +1,37 @@
+@import "assets/styles/theming";
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$my-vpn-primary: mat-palette($mat-indigo);
+$my-vpn-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$my-vpn-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$my-vpn-theme: mat-light-theme((
+  color: (
+    primary: $my-vpn-primary,
+    accent: $my-vpn-accent,
+    warn: $my-vpn-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($my-vpn-theme);
+
 /* You can add global styles to this file, and also import other style files */
 /* Global styles and import other style files */
 @import "assets/styles/fonts";
@@ -5,6 +39,7 @@
 @import "assets/styles/variables";
 @import "assets/styles/bootstrap-overrides";
 @import "assets/styles/bootstrap-dependencies";
+@import "assets/styles/swiper-overrides";
 
 body {
   font-family: $rubik-regular;
@@ -43,9 +78,18 @@ body {
 }
 
 .box-sho-button-primary {
-  box-shadow: 0 23px 20px rgba(245, 56, 56, 0.27);
+  box-shadow: 0px 15px 20px rgba(245, 56, 56, 0.4);
 }
 
+.cursor-pointer {
+  cursor: pointer !important;
+}
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+.bg-transparent {
+  background: transparent !important;
+}
+
+.px-7 {
+  padding-left: 3.5rem !important;
+  padding-right: 3.5rem !important;
+}

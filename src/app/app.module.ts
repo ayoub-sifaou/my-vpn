@@ -10,6 +10,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { ComponentEvaluatedComponent } from './home/component-evaluated/component-evaluated.component';
 import {SliderComponent} from './elements/header/slider/slider.component';
+import { SwiperModule } from 'swiper/angular';
+import { LoginComponent } from './shared/components/dialog/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -19,12 +25,18 @@ import {SliderComponent} from './elements/header/slider/slider.component';
     HomeComponent,
     ComponentEvaluatedComponent,
     SliderComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CountUpModule,
-    NgbModule
+    NgbModule,
+    SwiperModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

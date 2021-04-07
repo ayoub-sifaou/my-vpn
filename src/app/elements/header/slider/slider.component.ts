@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {A11y, Navigation, Autoplay, Pagination, Scrollbar, Mousewheel} from 'swiper';
+import SwiperCore from 'swiper/core';
+
+// install Swiper modules
+SwiperCore.use([Navigation, Autoplay, Pagination, Mousewheel, Scrollbar, A11y]);
 
 @Component({
   selector: 'app-slider',
@@ -11,5 +16,4 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

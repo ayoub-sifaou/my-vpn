@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import {MatDialog} from '@angular/material/dialog';
+import {LoginComponent} from '../../shared/components/dialog/login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,13 @@ import * as $ from 'jquery';
 export class HeaderComponent implements OnInit {
   navbarCollapsed = true;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
+  }
+
+  openDialog(): void {
+    this.dialog.open(LoginComponent);
   }
 }

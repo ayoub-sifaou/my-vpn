@@ -40,6 +40,9 @@
           top: 80%;
           left: 30%;
           text-align: center;
+          @media (max-width: 991px) {
+            display: block !important;
+          }
         }
       }
     }

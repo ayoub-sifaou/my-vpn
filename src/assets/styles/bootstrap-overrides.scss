@@ -29,6 +29,7 @@ $theme-colors: (
   "darker-gray": #4D4D4D,
   "black": #0B132A,
   "black-text-color": #4F5665,
+  "second-primary": #ff416c,
 );
 $body-bg: #ECECEC;
 $lighterGray: map_get($theme-colors, "lighterGray");
@@ -43,6 +44,7 @@ $second-color: map_get($theme-colors, "second-color");
 $gray-bg: map_get($theme-colors, "gray-bg");
 $text-black: map_get($theme-colors, "black");
 $black-text-color: map_get($theme-colors, 'black-text-color');
+$second-primary: map_get($theme-colors, 'second-primary');
 $primary : #F53838;
 $secondary: #2FAB73;
 $btn-border-radius: 10px;
