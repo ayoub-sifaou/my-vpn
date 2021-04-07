@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
 import {FormSignIn} from '../../../model/formSignIn';
 import {FormSignup} from '../../../model/formSignup';
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,9 @@ export class LoginComponent implements OnInit {
   formSignIn: FormGroup = new FormGroup({});
   formSignUp: FormGroup = new FormGroup({});
   animation: boolean = false;
+  faEyeSlash = faEyeSlash;
+  passwordUp : boolean = false;
+  passwordIn : boolean = false;
 
   constructor(private fb: FormBuilder) {}
 
@@ -44,7 +48,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmitSignUp(){
     if (this.formSignUp.valid) {
-      const form: FormSignIn = new FormSignup(this.formSignUp.value);
+      const form: FormSignup = new FormSignup(this.formSignUp.value);
       console.log(form);
     }
   }

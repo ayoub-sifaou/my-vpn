@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     MatDialogModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
