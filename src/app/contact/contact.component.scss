@@ -1,0 +1,9 @@
+@use "src/assets/styles/bootstrap-overrides" as bts-ove;
+
+.contact-page {
+  .icon-contact {
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid bts-ove.$primary;
+  }
+}

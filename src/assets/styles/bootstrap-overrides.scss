@@ -10,8 +10,8 @@ $spacers: (
   5: ($spacer * 1.5),
   6: ($spacer * 3)
 );
-$primary: #002d74;
-$secondary: #3dae2b;
+$primary: #F53838;
+$secondary: #24C28A;
 $third-color: #4197cb;
 $blue-light: #90C4E1;
 $yellow: #FFB758;
@@ -45,7 +45,8 @@ $gray-bg: map_get($theme-colors, "gray-bg");
 $text-black: map_get($theme-colors, "black");
 $black-text-color: map_get($theme-colors, 'black-text-color');
 $second-primary: map_get($theme-colors, 'second-primary');
-$primary : #F53838;
-$secondary: #2FAB73;
+
+
+
 $btn-border-radius: 10px;
 $btn-border-width: 2px;

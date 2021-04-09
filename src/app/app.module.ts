@@ -17,6 +17,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContactComponent } from './contact/contact.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ComponentEvaluatedComponent,
     SliderComponent,
     LoginComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,20 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatButtonModule,
+    MatIconModule
+  ],
+  exports: [
+    NgbModule,
+    SwiperModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    FontAwesomeModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

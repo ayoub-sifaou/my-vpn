@@ -1,22 +1,70 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {LoginComponent} from '../../shared/components/dialog/login/login.component';
+import { trigger, transition, style, animate, query, stagger, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('fade', [
+      transition('* => expand', [
+        query('.collapse', style({ opacity: 0 }), { optional: true }),
+        query('.collapse', stagger('300ms', [
+            animate('1s ease-in', keyframes([
+              style({ opacity: 0 }),
+              style({ opacity: .5 }),
+              style({ opacity: 1 }),
+            ]))
+          ]
+        ), { optional: true }),
+        query('li', style({ opacity: 0 }), { optional: true }),
+        query('li', stagger('200ms', [
+            animate('0.5s ease-in', keyframes([
+              style({ opacity: 0 }),
+              style({ opacity: .5 }),
+              style({ opacity: 1 }),
+            ]))
+          ]
+        ), { optional: true }),
+      ]),
+      transition('* => collapse', [
+        query('.collapse', stagger('300ms', [
+            animate('1s ease-in', keyframes([
+              style({ opacity: 1 }),
+              style({ opacity: .5 }),
+              style({ opacity: 0 }),
+            ]))
+          ]
+        ), { optional: true }),
+        query('li', stagger('200ms', [
+            animate('0.5s ease-in', keyframes([
+              style({ opacity: 1 }),
+              style({ opacity: .5 }),
+              style({ opacity: 0 }),
+            ]))
+          ]
+        ), { optional: true })
+      ])
+    ])
+  ]
 })
 export class HeaderComponent implements OnInit {
-  navbarCollapsed = true;
+  isCollapsed = true;
+  listAnimate = '';
 
   constructor(public dialog: MatDialog) { }
 
-  ngOnInit(): void {
+  ngOnInit() { }
 
+  onToggle() {
+    this.isCollapsed = !this.isCollapsed;
+    this.listAnimate = this.isCollapsed ? 'collapse' : 'expand';
   }
 
   openDialog(): void {
     this.dialog.open(LoginComponent);
+    this.isCollapsed = true;
   }
 }

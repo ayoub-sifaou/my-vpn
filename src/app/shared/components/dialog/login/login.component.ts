@@ -15,8 +15,7 @@ export class LoginComponent implements OnInit {
   formSignUp: FormGroup = new FormGroup({});
   animation: boolean = false;
   faEyeSlash = faEyeSlash;
-  passwordUp : boolean = false;
-  passwordIn : boolean = false;
+  hide = true;
 
   constructor(private fb: FormBuilder) {}
 
@@ -27,7 +26,7 @@ export class LoginComponent implements OnInit {
     });
     this.formSignUp = this.fb.group({
       userName: this.fb.control('', [Validators.required]),
-      email: this.fb.control('', [Validators.required]),
+      email: this.fb.control('', [Validators.required, Validators.email]),
       password: this.fb.control('', [Validators.required])
     });
   }

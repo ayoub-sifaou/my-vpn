@@ -64,3 +64,25 @@
   top: 60px;
   box-shadow: 0 23px 20px rgba(13, 16, 37, 0.12) !important;
 }
+
+.card-item {
+  @media (max-width: 991px) {
+    .list-items-card {
+      padding-left: 0;
+    }
+  }
+  @media (max-width: 767px) {
+   display: block;
+    .card:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    .list-items-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card-title {
+      font-size: 1.7rem !important;
+    }
+  }
+}

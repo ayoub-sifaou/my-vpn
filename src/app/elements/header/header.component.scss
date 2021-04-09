@@ -1,108 +1,29 @@
-@import "src/assets/styles/fonts";
-@import "src/assets/styles/variables";
-@import "src/assets/styles/bootstrap-overrides";
-@import "src/assets/styles/bootstrap-dependencies";
+@use "src/assets/styles/bootstrap-overrides" as bos-over;
 
-.component-header {
-  .navbar {
-    background-color: transparent !important;
-    .navbar-nav {
-      .nav-item {
-        a {
-          color: $black-text-color;
-          &:hover {
-            color: $primary;
-          }
-          &.active {
-            color: $primary;
-          }
-        }
-      }
-    }
-    .navbar-collapse {
-      &.show {
-        box-shadow: 0 23px 20px rgba(13, 16, 37, 0.12);
-        z-index: 9999999;
-        top: 0;
-        .navbar-nav {
-          .nav-link {
-            color: #4F5665 !important;
-          }
-          .btn-sign-in-up {
-            margin-top: 5px;
-            display: flex !important;
-            justify-content: space-between;
-            align-items: center;
-          }
-        }
-        .footer-navbar {
-          position: absolute;
-          top: 80%;
-          left: 30%;
-          text-align: center;
-          @media (max-width: 991px) {
-            display: block !important;
-          }
-        }
-      }
-    }
-    .icon-navbar {
-      @include media-breakpoint-up(md){
-        position: absolute;
-        right: -180px;
-      }
-    }
-    .icon-navbar[aria-expanded="true"] {
+
+
+.navigation-my-vpn {
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+  }
+
+  .sign-in-btn {
+    @media (max-width: 991px) {
       display: none;
     }
   }
-  .navbar-light {
-    .navbar-toggler {
-      border: none !important;
-      .navbar-toggler-icon {
-        background-image: none !important;
+  .btn-sign-in {
+    @media (min-width: 991px) {
+      display: none;
+    }
+  }
+  .navbar-collapse {
+    .nav-item {
+      .nav-link {
+        &.active {
+          color: bos-over.$primary;
+        }
       }
     }
-  }
-  @include media-breakpoint-down(md) {
-    .sign-in-up-header {
-      display: none !important;
-    }
-  }
-}
-
-.btn-sign {
-  background: transparent !important;
-  border-radius: 50px !important;
-  border: 1px solid $primary !important;
-  color: $primary !important;
-  padding: 5px 20px;
-  box-sizing: border-box !important;
-}
-
-@include media-breakpoint-down(md) {
-  .navbar-collapse {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    width: 75%;
-    height: 100%;
-  }
-
-  .navbar-collapse.collapsing {
-    left: -75%;
-    transition: height 0s ease;
-  }
-
-  .navbar-collapse.show {
-    left: 0;
-    transition: left 300ms ease-in-out;
-  }
-
-  .navbar-toggler.collapsed ~ .navbar-collapse {
-    transition: left 500ms ease-in-out;
   }
 }

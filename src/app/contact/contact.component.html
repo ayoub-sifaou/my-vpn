@@ -1,0 +1,90 @@
+<div class="contact-page mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card border-0">
+          <div class="card-header bg-white border-bottom-0 text-center">
+            <div class="title">
+              <span class="rubik-bold fs-25 lh-25">
+                Contact Us
+              </span>
+            </div>
+            <div class="content mt-4 fs-14 lh-20">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since imen book.
+              </p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-2">
+                    <span class="icon-contact"><fa-icon class="text-primary bg-white" [icon]="faMapMarkedAlt"></fa-icon></span>
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <span class="text-secondary rubik-medium">Address</span>
+                    </div>
+                    <div>
+                      <p>
+                        4135 Lorem Ipsum is simply dummy
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-2">
+                    <span class="icon-contact"><fa-icon class="text-primary bg-white" [icon]="faPhoneAlt"></fa-icon></span>
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <span class="text-secondary rubik-medium">Phone</span>
+                    </div>
+                    <div>
+                      <p>
+                       +123 25 654 856 254
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-2">
+                    <span class="icon-contact"><fa-icon class="text-primary bg-white" [icon]="faEnvelope"></fa-icon></span>
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <span class="text-secondary rubik-medium">Email</span>
+                    </div>
+                    <div>
+                      <p>
+                        my-vpn@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <form [formGroup]="formContact">
+                  <div class="card">
+                    <div class="card-body">
+                      <mat-form-field class="w-100  mb-4 example-full-width">
+                        <mat-label class="fs-14">Name</mat-label>
+                        <input class="fs-14" type="text" matInput placeholder="Name" formControlName="name">
+                      </mat-form-field>
+                      <mat-form-field class="w-100  mb-4 example-full-width">
+                        <mat-label class="fs-14">Email</mat-label>
+                        <input class="fs-14" type="email" matInput placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="formContact.controls.email.invalid">{{getErrorMessageForEmail()}}</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
