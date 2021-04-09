@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { faMapMarkedAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {FormSignIn} from "../shared/model/formSignIn";
+import {FormContact} from "../shared/model/formContact";
 
 @Component({
   selector: 'app-contact',
@@ -30,6 +32,13 @@ export class ContactComponent implements OnInit {
     }
 
     return this.formContact.controls.email.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  onSubmitContact (){
+    if (this.formContact.valid) {
+      const form: FormContact = new FormContact(this.formContact.value);
+      console.log(form);
+    }
   }
 
 }

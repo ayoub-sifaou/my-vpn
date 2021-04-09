@@ -38,7 +38,13 @@ export class LoginComponent implements OnInit {
   signIn() {
     this.animation = false;
   }
+  getErrorMessageForEmail() {
+    if (this.formSignUp.controls.email.hasError('required')) {
+      return 'You must enter a value';
+    }
 
+    return this.formSignUp.controls.email.hasError('email') ? 'Not a valid email' : '';
+  }
   onSubmitSignIn(){
     if (this.formSignIn.valid) {
       const form: FormSignIn = new FormSignIn(this.formSignIn.value);
