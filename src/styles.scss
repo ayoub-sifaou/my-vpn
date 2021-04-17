@@ -41,6 +41,11 @@ $my-vpn-theme: mat-light-theme((
 @import "assets/styles/bootstrap-dependencies";
 @import "assets/styles/swiper-overrides";
 
+html {
+  margin: 0;
+  height: 100vh;
+}
+
 body {
   font-family: $rubik-regular;
   background: $white;
