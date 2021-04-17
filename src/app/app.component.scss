@@ -1,3 +1,11 @@
+@import 'src/assets/styles/bootstrap-dependencies';
+
 .app-main {
-  min-height: 176px;
+  min-height: 128px;
+  @include media-breakpoint-down(md) {
+    min-height: 120px;
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: 153px;
+  }
 }
