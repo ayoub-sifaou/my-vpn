@@ -3,11 +3,11 @@
     <form [formGroup]="formSignUp">
       <span class="fs-30 lh-25 mb-4 rubik-bold">Create Account</span>
       <div class="my-2">
-        <a href="#"><span class="fs-18 icon-facebook mr-3"></span> </a>
-        <a href="#"><span class="fs-18 icon-twitter mr-3"></span> </a>
-        <a href="#"><span class="fs-18 icon-instagram"></span> </a>
+        <span class="icon-facebook text-white fs-16 border-radius-12 p-2 bg-primary icon-box-shadow-primary mr-3"></span>
+        <span class=" icon-twitter text-white fs-16 border-radius-12 p-2 bg-primary icon-box-shadow-primary mr-3"></span>
+        <span class=" icon-box-shadow-primary fs-16 border-radius-12 text-white p-2 bg-primary icon-instagram"></span>
       </div>
-      <p class="fs-12 lh-16 rubik-regular text-capitalize">or use your email for registration</p>
+      <p class="fs-12 mt-3 lh-16 rubik-regular text-capitalize">or use your email for registration</p>
       <mat-form-field class="w-100  mb-4 example-full-width">
         <mat-label class="fs-14">User Name <span class="text-primary">*</span></mat-label>
         <input class="fs-14" type="text" matInput placeholder="User Name" formControlName="userName">
@@ -22,7 +22,7 @@
         <input class="fs-14" type="password" matInput placeholder="Password" formControlName="password">
         <span class="view-password cursor-pointer"><fa-icon [icon]="faEyeSlash"></fa-icon></span>
       </mat-form-field>
-      <button type="submit" (click)="onSubmitSignUp()" class="btn px-7 text-white bg-second-primary"
+      <button type="submit" (click)="onSubmitSignUp()" class="btn px-7 btn-box-shadow-primary text-white bg-second-primary"
               [disabled]="!formSignUp.valid">Sign Up
       </button>
     </form>
@@ -31,11 +31,11 @@
     <form [formGroup]="formSignIn">
       <span class="fs-30 mb-4 lh-25 rubik-bold">Sign In</span>
       <div class="my-2">
-        <a href="#"><span class="fs-18 icon-facebook mr-3"></span> </a>
-        <a href="#"><span class="fs-18 icon-twitter mr-3"></span> </a>
-        <a href="#"><span class="fs-18 icon-instagram"></span> </a>
+       <span class=" icon-box-shadow-primary fs-16 border-radius-12 text-white p-2 bg-primary icon-facebook mr-3"></span>
+        <span class=" icon-box-shadow-primary fs-16 border-radius-12 text-white p-2 bg-primary icon-twitter mr-3"></span>
+        <span class=" icon-box-shadow-primary fs-16 border-radius-12 text-white p-2 bg-primary icon-instagram"></span>
       </div>
-      <p class="fs-12 lh-16 rubik-regular text-capitalize">or use your account</p>
+      <p class="fs-12 lh-16 mt-3 rubik-regular text-capitalize">or use your account</p>
       <mat-form-field class="w-100  mb-4 example-full-width">
         <mat-label class="fs-14">User Name <span class="text-primary">*</span></mat-label>
         <input class="fs-14" type="text" matInput placeholder="User Name" formControlName="userName">
@@ -48,7 +48,7 @@
         </button>
       </mat-form-field>
       <a href="#" class="text-black mb-3 rubik-medium fs-12 lh-16">Forgot your password?</a>
-      <button type="submit" (click)="onSubmitSignIn()" class="btn px-7 text-white bg-second-primary"
+      <button type="submit" (click)="onSubmitSignIn()" class="btn px-7 text-white btn-box-shadow-primary bg-second-primary"
               [disabled]="!formSignIn.valid">Sign In
       </button>
     </form>

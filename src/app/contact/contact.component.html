@@ -1,4 +1,4 @@
-<div class="contact-page mt-5">
+<div class="contact-page pt-10">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -20,11 +20,11 @@
               <div class="col-md-6">
                 <div class="row align-items-center">
                   <div class="col-2">
-                    <span class="icon-contact"><fa-icon class="text-primary bg-white" [icon]="faMapMarkedAlt"></fa-icon></span>
+                    <fa-icon class="text-white icon-contact icon-box-shadow-primary p-2 bg-primary" [icon]="faMapMarkedAlt"></fa-icon>
                   </div>
                   <div class="col-6">
                     <div>
-                      <span class="text-secondary rubik-medium">Address</span>
+                      <span class=" rubik-medium">Address</span>
                     </div>
                     <div>
                       <p>
@@ -35,11 +35,11 @@
                 </div>
                 <div class="row align-items-center">
                   <div class="col-2">
-                    <span class="icon-contact"><fa-icon class="text-primary bg-white" [icon]="faPhoneAlt"></fa-icon></span>
+                    <fa-icon class="text-white icon-contact icon-box-shadow-primary p-2 bg-primary" [icon]="faPhoneAlt"></fa-icon>
                   </div>
                   <div class="col-6">
                     <div>
-                      <span class="text-secondary rubik-medium">Phone</span>
+                      <span class="rubik-medium">Phone</span>
                     </div>
                     <div>
                       <p>
@@ -50,11 +50,11 @@
                 </div>
                 <div class="row align-items-center">
                   <div class="col-2">
-                    <span class="icon-contact"><fa-icon class="text-primary bg-white" [icon]="faEnvelope"></fa-icon></span>
+                    <fa-icon class="text-white icon-contact icon-box-shadow-primary p-2 bg-primary" [icon]="faEnvelope"></fa-icon>
                   </div>
                   <div class="col-6">
                     <div>
-                      <span class="text-secondary rubik-medium">Email</span>
+                      <span class=" rubik-medium">Email</span>
                     </div>
                     <div>
                       <p>
@@ -93,8 +93,8 @@
                         </mat-error>
                       </mat-form-field>
                     </div>
-                    <div class="card-footer border-0 bg-white text-right">
-                      <button type="submit" (click)="onSubmitContact()" class="btn px-5 text-white bg-second-primary"
+                    <div class="card-footer mb-3 border-0 bg-white text-right">
+                      <button type="submit" (click)="onSubmitContact()" class="btn btn-box-shadow-primary px-5 text-white bg-second-primary"
                               [disabled]="!formContact.valid">Sign In
                       </button>
                     </div>

@@ -1,5 +1,4 @@
-@import 'src/assets/styles/variables';
-@import 'src/assets/styles/bootstrap-overrides';
+@use 'src/assets/styles/bootstrap-overrides' as *;
 @import 'src/assets/styles/bootstrap-dependencies';
 
 .image-main {
@@ -59,10 +58,26 @@
   }
 }
 .card-main {
-  position: absolute;
-  width: 100%;
-  top: 60px;
-  box-shadow: 0 23px 20px rgba(13, 16, 37, 0.12) !important;
+   position: absolute;
+   border: 1px solid $gray-300;
+   border-radius: 5px;
+   top: 60px;
+   box-shadow: 0 23px 20px rgba(13, 16, 37, 0.12) !important;
+   background: $white;
+   padding: 30px;
+   width: 97%;
+   margin: 0;
+
+  @include media-breakpoint-down(md) {
+    top: 20px;
+  }
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      width: 100%;
+      top: inherit;
+      margin-top: 15px;
+    }
 }
 
 .card-item {

@@ -20,6 +20,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './contact/contact.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatButtonModule} from '@angular/material/button';
     ComponentEvaluatedComponent,
     SliderComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
