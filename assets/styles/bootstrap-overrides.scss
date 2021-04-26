@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins/function_mixin";
+@import "mixins/pseudo-css";
 
 $spacer: 1rem;
 $spacers: (
@@ -54,5 +55,5 @@ $btn-border-width: 2px;
 
 $colors :("primary" : $primary, "secondary" : $secondary, "yellow" : $yellow);
 @include shadow($colors);
-
+@include hover($colors);
 @include borderRadius(25);
