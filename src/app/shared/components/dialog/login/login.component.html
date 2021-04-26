@@ -1,7 +1,7 @@
-<div class="container" [ngClass]="animation ? 'right-panel-active' : ''">
+<div class="container login-component" [ngClass]="{'right-panel-active' : animation}">
   <div class="form-container sign-up-container">
     <form [formGroup]="formSignUp">
-      <span class="fs-30 lh-25 mb-4 rubik-bold">Create Account</span>
+      <span class="fs-30 lh-25 title-sign mb-4 rubik-bold">Sign Up</span>
       <div class="my-2">
         <span class="icon-facebook text-white fs-16 border-radius-12 p-2 bg-primary icon-box-shadow-primary mr-3"></span>
         <span class=" icon-twitter text-white fs-16 border-radius-12 p-2 bg-primary icon-box-shadow-primary mr-3"></span>
@@ -25,11 +25,12 @@
       <button type="submit" (click)="onSubmitSignUp()" class="btn px-7 btn-box-shadow-primary text-white bg-second-primary"
               [disabled]="!formSignUp.valid">Sign Up
       </button>
+      <span class="fs-14 mt-5 text-hover-primary d-none link-btn lh-16" (click)="signIn()">Sign In</span>
     </form>
   </div>
   <div class="form-container sign-in-container">
     <form [formGroup]="formSignIn">
-      <span class="fs-30 mb-4 lh-25 rubik-bold">Sign In</span>
+      <span class="fs-30 mb-4 lh-25 title-sign rubik-bold">Sign In</span>
       <div class="my-2">
        <span class=" icon-box-shadow-primary fs-16 border-radius-12 text-white p-2 bg-primary icon-facebook mr-3"></span>
         <span class=" icon-box-shadow-primary fs-16 border-radius-12 text-white p-2 bg-primary icon-twitter mr-3"></span>
@@ -51,6 +52,8 @@
       <button type="submit" (click)="onSubmitSignIn()" class="btn px-7 text-white btn-box-shadow-primary bg-second-primary"
               [disabled]="!formSignIn.valid">Sign In
       </button>
+
+      <span class="fs-14 mt-5 text-hover-primary d-none link-btn lh-16" (click)="signUp()">Sign Up</span>
     </form>
   </div>
   <div class="overlay-container">

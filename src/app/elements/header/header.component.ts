@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {LoginComponent} from '../../shared/components/dialog/login/login.component';
 import { trigger, transition, style, animate, query, stagger, keyframes } from '@angular/animations';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -53,6 +54,7 @@ import { trigger, transition, style, animate, query, stagger, keyframes } from '
 export class HeaderComponent implements OnInit {
   isCollapsed = true;
   listAnimate = '';
+  faTimes = faTimes;
 
   constructor(public dialog: MatDialog) { }
 

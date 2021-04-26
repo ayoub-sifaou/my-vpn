@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
 import {FormSignIn} from '../../../model/formSignIn';
 import {FormSignup} from '../../../model/formSignup';
-import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEyeSlash, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
   formSignUp: FormGroup = new FormGroup({});
   animation: boolean = false;
   faEyeSlash = faEyeSlash;
+  faTimes = faTimes;
   hide = true;
+  closeModel: boolean = true;
 
   constructor(private fb: FormBuilder) {}
 

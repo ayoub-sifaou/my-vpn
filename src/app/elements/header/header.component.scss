@@ -1,6 +1,12 @@
 @use "src/assets/styles/bootstrap-overrides" as bos-over;
 
-
+.navigation {
+  @media (max-width: 991px) {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+  }
+}
 
 .navigation-my-vpn {
   @media (max-width: 991px) {
@@ -20,10 +26,16 @@
   .navbar-collapse {
     .nav-item {
       .nav-link {
-        &.active {
+        &.active, &:hover {
           color: bos-over.$primary;
         }
       }
+    }
+  }
+  .btn-sign-hover {
+    &:hover {
+      background: bos-over.$primary !important;
+      color: #fff !important;
     }
   }
 }

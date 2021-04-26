@@ -11,7 +11,7 @@
         </div>
       </a>
       <button type="button" class="border-0 navbar-toggler" (click)="onToggle()" aria-expanded="false">
-        <span [ngClass]="isCollapsed ? 'd-none' : 'd-black'"><img src="assets/images/close.png" /> </span>
+        <span [ngClass]="isCollapsed ? 'd-none' : 'd-black'"><fa-icon class="fs-30 text-primary" [icon]="faTimes"></fa-icon> </span>
         <span [ngClass]="isCollapsed ? 'd-black' : 'd-none'"><img src="assets/icons/menu.svg" /> </span>
       </button>
       <div class="collapse navbar-collapse mt-3" [ngbCollapse]="isCollapsed">
@@ -31,16 +31,13 @@
           <li class="nav-item">
             <a class="nav-link" [routerLinkActive]="['active']" routerLink="contact">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
-          </li>
           <li class="nav-item mt-3 text-center btn-sign-in rubik-medium fs-22 lh-29 justify-content-center">
-            <button class="btn px-5 btn-transparont btn-primary" (click)="openDialog()">Sign In</button>
+            <button class="btn px-5 btn-transparont btn-sign-hover btn-primary" (click)="openDialog()">Sign In</button>
           </li>
         </ul>
       </div>
       <div class="col-md-3 sign-in-btn text-right rubik-medium fs-14 lh-19 justify-content-end sign-in-up-header align-items-center">
-        <button class="btn btn-transparont px-5 btn-primary" (click)="openDialog()">Sign In</button>
+        <button class="btn btn-transparont btn-sign-hover px-5 btn-primary" (click)="openDialog()">Sign In</button>
       </div>
     </nav>
   </div>

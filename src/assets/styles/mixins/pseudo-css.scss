@@ -1,0 +1,19 @@
+@mixin hover($colors) {
+  @each $name, $color in $colors {
+    .text-hover-#{$name} {
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+}
+
+@mixin active($colors) {
+  @each $name, $color in $colors {
+    .text-active-#{$name} {
+      &:active {
+        color: $color;
+      }
+    }
+  }
+}
