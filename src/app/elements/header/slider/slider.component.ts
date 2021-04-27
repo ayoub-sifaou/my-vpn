@@ -1,9 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import {A11y, Navigation, Autoplay, Pagination, Scrollbar, Mousewheel} from 'swiper';
-import SwiperCore from 'swiper/core';
+import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay
+} from 'swiper/core';
 
 // install Swiper modules
-SwiperCore.use([Navigation, Autoplay, Pagination, Mousewheel, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 @Component({
   selector: 'app-slider',
@@ -11,9 +17,13 @@ SwiperCore.use([Navigation, Autoplay, Pagination, Mousewheel, Scrollbar, A11y]);
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
+  constructor() {
 
-  constructor() { }
-
+  }
+  ngAfterViewInit(): void {
+    // install Swiper modules
+    SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+  }
   ngOnInit(): void {
   }
 }

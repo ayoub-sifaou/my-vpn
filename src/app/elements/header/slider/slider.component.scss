@@ -19,9 +19,13 @@
       .btn-slider {
         text-align: center;
         margin-bottom: 30px;
-        .btn {
+        .get-started {
           padding-top: 1rem !important;
           padding-bottom: 1rem !important;
+          @include media-breakpoint-down(sm) {
+            padding-top: 0.4rem !important;
+            padding-bottom: 0.4rem !important;
+          }
         }
       }
       .image-background {

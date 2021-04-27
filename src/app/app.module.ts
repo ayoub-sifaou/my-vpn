@@ -36,32 +36,32 @@ import { HeaderImageComponent } from './shared/components/header-image/header-im
     ContactComponent,
     NotFoundComponent,
     FeaturesComponent,
-    HeaderImageComponent
+    HeaderImageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CountUpModule,
     NgbModule,
-    SwiperModule,
     BrowserAnimationsModule,
     MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
     FontAwesomeModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    SwiperModule
   ],
   exports: [
     NgbModule,
-    SwiperModule,
     BrowserAnimationsModule,
     MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
     FontAwesomeModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

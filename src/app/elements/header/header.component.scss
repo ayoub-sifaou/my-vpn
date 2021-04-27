@@ -27,6 +27,7 @@
   .navbar-collapse {
     .nav-item {
       .nav-link {
+        padding: 12px 20px;
         &.active, &:hover {
           color: $primary;
         }
@@ -34,9 +35,8 @@
       @include media-breakpoint-down(md) {
         &:not(:last-child) {
           margin-bottom: 8px;
-         a {
-           &.active, &:hover {
-             padding: 12px 8px;
+          .nav-link {
+           &.active, &:hover, &:active {
              background: rgba($primary, 0.6);
              color: white;
              border-radius: 13px;
