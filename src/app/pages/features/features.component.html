@@ -1,0 +1,42 @@
+<div class="container features-component">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="title-features">
+        <span class="rubik-bold text-primary fs-25 lh-25 text-capitalize">Mes features</span>
+      </div>
+      <div class="description-features mt-4">
+        <p class="fs-14 lh-30">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since imen book.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since imen book.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since imen book.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-10">
+    <div class="col-md-4 mb-5 item-feature" *ngFor="let feature of featuresData">
+      <div class="card border-0 border-radius-20">
+        <div class="card-header pt-5 bg-transparent d-flex justify-content-center align-items-center border-0">
+          <div class="image-feature">
+            <img src="assets/images/{{feature.picture}}" alt="" class="w-100 h-100" />
+          </div>
+        </div>
+        <div class="card-body">
+         <div class="title-item mb-3">
+            <span class="card-title rubik-medium fs-18 lh-18">
+            {{feature.title}}
+          </span>
+         </div>
+          <div class="description-item">
+            <p class="card-text fs-14 lh-30">
+              {{feature.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

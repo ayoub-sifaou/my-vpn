@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { faMapMarkedAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {FormSignIn} from "../shared/model/formSignIn";
-import {FormContact} from "../shared/model/formContact";
+import {FormContact} from '../../shared/model/formContact';
 
 @Component({
   selector: 'app-contact',
