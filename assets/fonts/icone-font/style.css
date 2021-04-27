@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?koi9k6');
-  src:  url('fonts/icomoon.eot?koi9k6#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?koi9k6') format('truetype'),
-    url('fonts/icomoon.woff?koi9k6') format('woff'),
-    url('fonts/icomoon.svg?koi9k6#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?6kr45v');
+  src:  url('fonts/icomoon.eot?6kr45v#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?6kr45v') format('truetype'),
+    url('fonts/icomoon.woff?6kr45v') format('woff'),
+    url('fonts/icomoon.svg?6kr45v#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,7 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram:before {
+.icon-instgram:before {
   content: "\e906";
 }
 .icon-twitter:before {
@@ -37,7 +37,7 @@
 .icon-check-not-cercle:before {
   content: "\e900";
 }
-.icon-checked:before {
+.icon-cheked:before {
   content: "\e901";
 }
 .icon-server:before {
@@ -51,4 +51,22 @@
 }
 .icon-Vector:before {
   content: "\e905";
+}
+.icon-price-tags:before {
+  content: "\e936";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-enter:before {
+  content: "\ea13";
+}
+.icon-exit:before {
+  content: "\ea14";
 }
