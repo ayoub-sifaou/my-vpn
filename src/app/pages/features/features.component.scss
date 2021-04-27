@@ -1,16 +1,19 @@
-
+@import 'src/assets/styles/bootstrap-dependencies';
 
 .features-component {
-  .item-feature {
-    .card {
-      box-shadow: 0 9px 36px rgb(13 16 37 / 12%);
-      img {
-          fill: red;
+  .list-item-features {
+    margin-top: 6rem;
+    .item-feature {
+      .card {
+        box-shadow: 0 9px 36px rgb(13 16 37 / 12%);
+        .image-feature {
+          width: 150px;
+          height: 150px;
+        }
       }
-      .image-feature {
-        width: 150px;
-        height: 150px;
-      }
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 2rem;
     }
   }
 }
