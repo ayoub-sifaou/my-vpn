@@ -1,9 +1,10 @@
-@use "src/assets/styles/bootstrap-overrides" as bos-over;
+@use "src/assets/styles/bootstrap-overrides" as *;
+@import "src/assets/styles/bootstrap-dependencies";
 
 .navigation {
   @media (max-width: 991px) {
     position: fixed;
-    background: #fff;
+    background: $white;
     width: 100%;
   }
 }
@@ -27,15 +28,28 @@
     .nav-item {
       .nav-link {
         &.active, &:hover {
-          color: bos-over.$primary;
+          color: $primary;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+         a {
+           &.active, &:hover {
+             padding: 12px 8px;
+             background: rgba($primary, 0.6);
+             color: white;
+             border-radius: 13px;
+           }
+         }
         }
       }
     }
   }
   .btn-sign-hover {
     &:hover {
-      background: bos-over.$primary !important;
-      color: #fff !important;
+      background: $primary !important;
+      color: $white !important;
     }
   }
 }

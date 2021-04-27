@@ -83,7 +83,11 @@
     text-align: center;
   }
   @include media-breakpoint-down(sm) {
-    min-height: 530px;
+    position: fixed;
+    border-radius: 0 0 20px 20px;
+    left: 0;
+    top: 69px;
+    width: 100%;
     .title-sign {
       font-size: 25px !important;
       margin-bottom: 30px !important;
