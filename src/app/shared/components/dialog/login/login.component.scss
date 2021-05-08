@@ -1,14 +1,14 @@
-@import "src/assets/styles/fonts";
-@import "src/assets/styles/variables";
-@import "src/assets/styles/bootstrap-overrides";
+@use "src/assets/styles/variables" as *;
+@use "src/assets/styles/bootstrap-overrides" as *;
 @import "src/assets/styles/bootstrap-dependencies";
+@import "src/assets/styles/mixins/function_mixin";
 
 .social-container {
   margin: 20px 0;
 }
 
 .social-container a {
-  border: 1px solid #dddddd;
+  border: 1px solid $white;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -23,6 +23,9 @@
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
+  @include media-breakpoint-down(sm) {
+    top: -76px;
+  }
 }
 
 .sign-in-container {
@@ -43,61 +46,80 @@
     width: 100%;
   }
 }
-
-.login-component {
-  background-color: $white;
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  position: relative;
-  overflow: hidden;
-  width: 768px;
-  max-width: 100%;
-  min-height: 480px;
-  &.right-panel-active {
-    .sign-in-container {
-      transform: translateX(100%);
-    }
-    .sign-up-container {
-      transform: translateX(100%);
-      opacity: 1;
-      z-index: 5;
-      animation: show 0.6s;
-    }
-    @include media-breakpoint-down(sm) {
-      .sign-up-container {
-        transform: translateX(0%);
-      }
-      .sign-in-container {
-        transform: translateX(0%);
-      }
-    }
-  }
-  form {
+.dialog-login {
+  .login-component {
     background-color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
-  }
-  @include media-breakpoint-down(sm) {
-    position: fixed;
-    border-radius: 0 0 20px 20px;
-    left: 0;
-    top: 69px;
-    width: 100%;
-    .title-sign {
-      font-size: 25px !important;
-      margin-bottom: 30px !important;
-    }
-    .link-btn {
-      display: block !important;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    &.right-panel-active {
+      .sign-in-container {
+        transform: translateX(100%);
+      }
+      .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: show 0.6s;
+      }
+      @include media-breakpoint-down(sm) {
+        .sign-up-container {
+          transform: translateX(0%);
+        }
+        .sign-in-container {
+          transform: translateX(0%);
+        }
+      }
     }
     form {
-      width: 100%;
-      padding: 30px 30px;
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 50px;
+      height: 100%;
+      text-align: center;
+    }
+    .close-login {
+      position: absolute;
+      z-index: 999;
+      bottom: 113px;
+      left: 47%;
+      color: $white;
+      background: rgba($primary, 0.5);
+      padding: 5px;
+      border-radius: 50%;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    height: 100%;
+    border-radius: 0 35px 220px 0;
+    width: 80%;
+    top: 0;
+    left: 0;
+    background: $white;
+    .login-component {
+      border-radius: 0 35px 220px 0;
+      height: 100%;
+      @include gradientToWhiteToLeftTop($primary);
+      .title-sign {
+        font-size: 25px !important;
+        margin-bottom: 30px !important;
+      }
+      .link-btn {
+        display: block !important;
+      }
+      form {
+        background: initial;
+        width: 100%;
+        padding: 30px 30px;
+      }
     }
   }
 }

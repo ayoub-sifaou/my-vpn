@@ -16,3 +16,7 @@
     }
   }
 }
+
+@mixin gradientToWhiteToLeftTop ($color) {
+  background: linear-gradient(to right bottom, rgba($color, 0.01) 0%, rgba($color, 0.1) 100%) !important;
+}

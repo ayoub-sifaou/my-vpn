@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
 import {FormSignIn} from '../../../model/formSignIn';
 import {FormSignup} from '../../../model/formSignup';
-import { faEyeSlash, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faEyeSlash, faTimes, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',
@@ -18,8 +19,8 @@ export class LoginComponent implements OnInit {
   faTimes = faTimes;
   hide = true;
   closeModel: boolean = true;
-
-  constructor(private fb: FormBuilder) {}
+  faTimesCircle = faTimesCircle;
+  constructor(private fb: FormBuilder, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.formSignIn = this.fb.group({
@@ -58,5 +59,15 @@ export class LoginComponent implements OnInit {
       const form: FormSignup = new FormSignup(this.formSignUp.value);
       console.log(form);
     }
+  }
+  closeDialogLogin(){
+    // this.dialog.getDialogById('12');
+    const navigation = document.getElementById('navigation');
+    if (navigation?.classList.contains('hidden-nav')) {
+      navigation.classList.remove('hidden-nav');
+    } else {
+      navigation?.classList.add('hidden-nav');
+    }
+    this.dialog.closeAll();
   }
 }

@@ -1,4 +1,4 @@
-<div class="navigation py-2 sticky-top shadow-sm">
+<div id="navigation" class="navigation py-2 sticky-top shadow-sm">
   <div class="container navigation-my-vpn">
     <nav [@fade]="listAnimate" class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand text-black" href="#">
@@ -14,7 +14,7 @@
         <span [ngClass]="isCollapsed ? 'd-none' : 'd-black'"><fa-icon class="fs-30 text-primary" [icon]="faTimes"></fa-icon> </span>
         <span [ngClass]="isCollapsed ? 'd-black' : 'd-none'"><img src="assets/icons/menu.svg" /> </span>
       </button>
-      <div class="collapse navbar-collapse mt-3" [ngbCollapse]="isCollapsed">
+      <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
         <ul class="navbar-nav fs-16 lh-19 ml-auto">
           <li class="nav-item">
             <a class="nav-link" routerLink="/" aria-current="page" [routerLinkActiveOptions]="{exact:true}" [routerLinkActive]="['active']">Home</a>

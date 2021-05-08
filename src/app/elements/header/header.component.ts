@@ -66,7 +66,17 @@ export class HeaderComponent implements OnInit {
   }
 
   openDialog(): void {
-    this.dialog.open(LoginComponent);
+    this.dialog.open(LoginComponent, {
+      data: {
+        id: '12'
+      }
+    });
     this.isCollapsed = true;
+    const navigation = document.getElementById('navigation');
+    if (navigation?.classList.contains('hidden-nav')) {
+      navigation.classList.remove('hidden-nav');
+    } else {
+      navigation?.classList.add('hidden-nav');
+    }
   }
 }

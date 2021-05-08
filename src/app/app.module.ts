@@ -23,6 +23,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FeaturesComponent } from './pages/features/features.component';
 import { HeaderImageComponent } from './shared/components/header-image/header-image.component';
+import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HeaderImageComponent } from './shared/components/header-image/header-im
     NotFoundComponent,
     FeaturesComponent,
     HeaderImageComponent,
+    TestimonialsComponent,
   ],
   imports: [
     BrowserModule,

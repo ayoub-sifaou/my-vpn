@@ -7,49 +7,56 @@
     background: $white;
     width: 100%;
   }
-}
-
-.navigation-my-vpn {
-  @media (max-width: 991px) {
-    max-width: 100% !important;
-  }
-
-  .sign-in-btn {
+  .navigation-my-vpn {
     @media (max-width: 991px) {
-      display: none;
+      max-width: 100% !important;
     }
-  }
-  .btn-sign-in {
-    @media (min-width: 991px) {
-      display: none;
+
+    .sign-in-btn {
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
-  }
-  .navbar-collapse {
-    .nav-item {
-      .nav-link {
-        padding: 12px 20px;
-        &.active, &:hover {
-          color: $primary;
+    .btn-sign-in {
+      @media (min-width: 991px) {
+        display: none;
+      }
+    }
+    .navbar-collapse {
+      .nav-item {
+        .nav-link {
+          padding: 12px 20px;
+          &.active, &:hover {
+            color: $primary;
+          }
+        }
+        @include media-breakpoint-down(md) {
+          &:not(:last-child) {
+            margin-bottom: 8px;
+            .nav-link {
+              &.active, &:hover, &:active {
+                background: rgba($primary, 0.6);
+                color: white;
+                border-radius: 13px;
+              }
+            }
+          }
         }
       }
       @include media-breakpoint-down(md) {
-        &:not(:last-child) {
-          margin-bottom: 8px;
-          .nav-link {
-           &.active, &:hover, &:active {
-             background: rgba($primary, 0.6);
-             color: white;
-             border-radius: 13px;
-           }
-         }
-        }
+        margin-top: 1rem;
+      }
+    }
+    .btn-sign-hover {
+      &:hover {
+        background: $primary !important;
+        color: $white !important;
       }
     }
   }
-  .btn-sign-hover {
-    &:hover {
-      background: $primary !important;
-      color: $white !important;
+  @include media-breakpoint-down(sm) {
+    &.hidden-nav {
+      display: none;
     }
   }
 }
