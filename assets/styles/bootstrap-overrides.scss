@@ -32,6 +32,7 @@ $theme-colors: (
   "black": #0B132A,
   "black-text-color": #4F5665,
   "second-primary": #ff416c,
+  "primary-4": rgba($primary, 0.4),
 );
 $body-bg: #ECECEC;
 $lighterGray: map_get($theme-colors, "lighterGray");
@@ -47,6 +48,7 @@ $gray-bg: map_get($theme-colors, "gray-bg");
 $text-black: map_get($theme-colors, "black");
 $black-text-color: map_get($theme-colors, 'black-text-color');
 $second-primary: map_get($theme-colors, 'second-primary');
+$primary-4: map_get($theme-colors, 'primary-4');
 
 
 

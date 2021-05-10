@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?6kr45v');
-  src:  url('fonts/icomoon.eot?6kr45v#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?6kr45v') format('truetype'),
-    url('fonts/icomoon.woff?6kr45v') format('woff'),
-    url('fonts/icomoon.svg?6kr45v#icomoon') format('svg');
+  font-family: 'my-vpn';
+  src:  url('fonts/my-vpn.eot?ss5jyz');
+  src:  url('fonts/my-vpn.eot?ss5jyz#iefix') format('embedded-opentype'),
+    url('fonts/my-vpn.ttf?ss5jyz') format('truetype'),
+    url('fonts/my-vpn.woff?ss5jyz') format('woff'),
+    url('fonts/my-vpn.svg?ss5jyz#my-vpn') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'my-vpn' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-technical-support:before {
+  content: "\e909";
+}
+.icon-photo:before {
+  content: "\e90a";
+}
+.icon-digital-marketing:before {
+  content: "\e90b";
+}
+.icon-devo:before {
+  content: "\e90c";
+}
+.icon-design:before {
+  content: "\e90d";
+}
+.icon-branding:before {
+  content: "\e90e";
+}
 .icon-instagram:before {
   content: "\e906";
 }
@@ -37,7 +55,7 @@
 .icon-check-not-cercle:before {
   content: "\e900";
 }
-.icon-checked:before {
+.icon-cheked:before {
   content: "\e901";
 }
 .icon-server:before {
