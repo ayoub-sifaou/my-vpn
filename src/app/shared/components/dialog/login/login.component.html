@@ -1,6 +1,6 @@
 <div class="dialog-login">
   <div class="container login-component" [ngClass]="{'right-panel-active' : animation}">
-    <div class="form-container sign-up-container">
+    <div class="form-container sign-up-container" id="sign-up">
       <form [formGroup]="formSignUp">
         <span class="fs-30 lh-25 title-sign mb-4 rubik-bold">Sign Up</span>
         <div class="my-2">
@@ -20,13 +20,15 @@
         </mat-form-field>
         <mat-form-field class="w-100  mb-4 example-full-width">
           <mat-label class="fs-14">Password <span class="text-primary">*</span></mat-label>
-          <input class="fs-14" type="password" matInput placeholder="Password" formControlName="password">
-          <span class="view-password cursor-pointer"><fa-icon [icon]="faEyeSlash"></fa-icon></span>
+          <input class="fs-14" matInput [type]="hideSignUp ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hideSignUp = !hideSignUp" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideSignUp">
+            <mat-icon class="fs-18 cursor-pointer">{{hideSignUp ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
         <button type="submit" (click)="onSubmitSignUp()" class="btn px-7 btn-box-shadow-primary text-white bg-second-primary"
                 [disabled]="!formSignUp.valid">Sign Up
         </button>
-        <span class="fs-14 mt-5 text-hover-primary d-none link-btn lh-16" (click)="signIn()">Sign In</span>
+        <span class="fs-14 mt-5 text-hover-primary cursor-pointer d-none link-btn lh-16" (click)="signIn()">Sign In</span>
       </form>
     </div>
     <div class="form-container sign-in-container">
@@ -44,17 +46,17 @@
         </mat-form-field>
         <mat-form-field class="w-100  mb-4 example-full-width">
           <mat-label class="fs-14">Password <span class="text-primary">*</span></mat-label>
-          <input class="fs-14" type="password" matInput placeholder="Password" formControlName="password">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <input class="fs-14" matInput [type]="hideSignIn ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hideSignIn = !hideSignIn" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideSignIn">
+            <mat-icon class="fs-18 cursor-pointer">{{hideSignIn ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
         <a href="#" class="text-black mb-3 rubik-medium fs-12 lh-16">Forgot your password?</a>
-        <button type="submit" (click)="onSubmitSignIn()" class="btn px-7 text-white btn-box-shadow-primary bg-second-primary"
+        <button type="submit" (click)="onSubmitSignIn()" class="btn px-7 cursor-pointer text-white btn-box-shadow-primary bg-second-primary"
                 [disabled]="!formSignIn.valid">Sign In
         </button>
 
-        <span class="fs-14 mt-5 text-hover-primary d-none link-btn lh-16" (click)="signUp()">Sign Up</span>
+        <span class="fs-14 mt-5 text-hover-primary cursor-pointer d-none link-btn lh-16" (click)="signUp()">Sign Up</span>
       </form>
     </div>
     <div class="overlay-container">
@@ -64,7 +66,7 @@
           <p class="fs-12 lh-16 rubik-regular text-capitalize">
             To keep connected with us please login with your personal info
           </p>
-          <button class="btn border-white mt-4 px-7 bg-transparent text-uppercase text-white" (click)="signIn()">Sign In
+          <button class="btn border-white mt-4 px-7 cursor-pointer bg-transparent text-uppercase text-white" (click)="signIn()">Sign In
           </button>
         </div>
         <div class="overlay-panel overlay-right">
@@ -75,7 +77,7 @@
         </div>
       </div>
     </div>
-    <span (click)="closeDialogLogin()" class="close-login display-sm fs-25 cursor-pointer"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
+    <span (click)="closeDialogLogin()" class="close-login d-none fs-25 cursor-pointer"><fa-icon [icon]="faTimesCircle"></fa-icon></span>
   </div>
 </div>
 

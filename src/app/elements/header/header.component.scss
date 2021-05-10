@@ -1,50 +1,83 @@
 @use "src/assets/styles/bootstrap-overrides" as *;
 @import "src/assets/styles/bootstrap-dependencies";
+@import "src/assets/styles/mixins/function_mixin";
 
 .navigation {
-  @media (max-width: 991px) {
+  @include media-breakpoint-down(md) {
     position: fixed;
     background: $white;
     width: 100%;
+    .navigation-my-vpn {
+      max-width: 100% !important;
+      .sign-in-btn {
+        display: none;
+      }
+      .btn-sign-in {
+        display: block;
+      }
+      .navbar-collapse {
+        position: absolute;
+        overflow: hidden;
+        top: 61px;
+        width: 285px;
+        left: -15px;
+        height: calc(100vh - 69.2px);
+        background: $white;
+        border-radius: 0 20px 135px 0;
+        padding: 30px;
+        .btn-sign-in {
+          position: absolute;
+          bottom: 30px;
+        }
+        .navbar-nav {
+          margin-left: initial !important;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          padding: 30px;
+          top: 0;
+          box-shadow: 0 9px 30px rgb($primary, 30%);
+          @include gradientToWhiteToLeftTop($primary);
+          &:before {
+            content: "";
+            position: absolute;
+            background: rgba($primary, 0.1);
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            right: -49px;
+            top: -60px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba($primary, 0.1);
+            border-radius: 50%;
+            right: -71px;
+            bottom: -33px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .btn-sign-in {
+      display: none;
+    }
   }
   .navigation-my-vpn {
-    @media (max-width: 991px) {
-      max-width: 100% !important;
-    }
-
-    .sign-in-btn {
-      @media (max-width: 991px) {
-        display: none;
-      }
-    }
-    .btn-sign-in {
-      @media (min-width: 991px) {
-        display: none;
-      }
-    }
     .navbar-collapse {
       .nav-item {
         .nav-link {
-          padding: 12px 20px;
+          padding: 12px 10px;
           &.active, &:hover {
             color: $primary;
           }
         }
-        @include media-breakpoint-down(md) {
-          &:not(:last-child) {
-            margin-bottom: 8px;
-            .nav-link {
-              &.active, &:hover, &:active {
-                background: rgba($primary, 0.6);
-                color: white;
-                border-radius: 13px;
-              }
-            }
-          }
-        }
-      }
-      @include media-breakpoint-down(md) {
-        margin-top: 1rem;
       }
     }
     .btn-sign-hover {

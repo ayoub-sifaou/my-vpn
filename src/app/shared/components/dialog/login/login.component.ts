@@ -2,7 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
 import {FormSignIn} from '../../../model/formSignIn';
 import {FormSignup} from '../../../model/formSignup';
-import { faEyeSlash, faTimes, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import {faTimes, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 import {MatDialog} from '@angular/material/dialog';
 
 @Component({
@@ -15,10 +15,9 @@ export class LoginComponent implements OnInit {
   formSignIn: FormGroup = new FormGroup({});
   formSignUp: FormGroup = new FormGroup({});
   animation: boolean = false;
-  faEyeSlash = faEyeSlash;
   faTimes = faTimes;
-  hide = true;
-  closeModel: boolean = true;
+  hideSignUp = true;
+  hideSignIn = true;
   faTimesCircle = faTimesCircle;
   constructor(private fb: FormBuilder, public dialog: MatDialog) {}
 
@@ -35,10 +34,14 @@ export class LoginComponent implements OnInit {
   }
 
   signUp() {
+    const signUp = document.getElementById('sign-up');
+    signUp?.classList.add('translate');
     this.animation = true;
   }
 
   signIn() {
+    const signUp = document.getElementById('sign-up');
+    signUp?.classList.remove('translate');
     this.animation = false;
   }
   getErrorMessageForEmail() {
@@ -61,7 +64,6 @@ export class LoginComponent implements OnInit {
     }
   }
   closeDialogLogin(){
-    // this.dialog.getDialogById('12');
     const navigation = document.getElementById('navigation');
     if (navigation?.classList.contains('hidden-nav')) {
       navigation.classList.remove('hidden-nav');

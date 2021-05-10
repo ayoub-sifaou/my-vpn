@@ -23,9 +23,6 @@
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
-  @include media-breakpoint-down(sm) {
-    top: -76px;
-  }
 }
 
 .sign-in-container {
@@ -65,13 +62,8 @@
         opacity: 1;
         z-index: 5;
         animation: show 0.6s;
-      }
-      @include media-breakpoint-down(sm) {
-        .sign-up-container {
-          transform: translateX(0%);
-        }
-        .sign-in-container {
-          transform: translateX(0%);
+        &.translate {
+          transform: translateX(0);
         }
       }
     }
@@ -85,16 +77,6 @@
       height: 100%;
       text-align: center;
     }
-    .close-login {
-      position: absolute;
-      z-index: 999;
-      bottom: 113px;
-      left: 47%;
-      color: $white;
-      background: rgba($primary, 0.5);
-      padding: 5px;
-      border-radius: 50%;
-    }
   }
   @include media-breakpoint-down(sm) {
     position: absolute;
@@ -103,6 +85,7 @@
     width: 80%;
     top: 0;
     left: 0;
+    min-height:100%;
     background: $white;
     .login-component {
       border-radius: 0 35px 220px 0;
@@ -118,7 +101,17 @@
       form {
         background: initial;
         width: 100%;
-        padding: 30px 30px;
+      }
+      .close-login {
+        position: absolute;
+        display: block !important;
+        z-index: 999;
+        bottom: 56px;
+        left: 44%;
+        color: $white;
+        background: rgba($primary, 0.5);
+        padding: 5px;
+        border-radius: 50%;
       }
     }
   }
@@ -137,21 +130,6 @@
     z-index: 5;
   }
 }
-
-//@keyframes showMobileIn {
-//  100%, 50% {
-//    opacity: 0;
-//    z-index: 1;
-//  }
-//  49.99%, 0% {
-//    opacity: 1;
-//    z-index: 5;
-//  }
-//}
-//
-//@keyframes showMobileUp {
-//
-//}
 
 .overlay-container {
   position: absolute;
