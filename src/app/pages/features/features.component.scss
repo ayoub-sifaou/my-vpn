@@ -1,14 +1,15 @@
-@import 'src/assets/styles/bootstrap-dependencies';
+@use "../../../assets/styles/bootstrap-overrides" as *;
+@import '../../../assets/styles/bootstrap-dependencies';
 
 .features-component {
   .list-item-features {
     margin-top: 6rem;
     .item-feature {
       .card {
-        box-shadow: 0 9px 36px rgb(13 16 37 / 12%);
         .image-feature {
-          width: 150px;
-          height: 150px;
+          span {
+            font-size: 180px;
+          }
         }
       }
     }

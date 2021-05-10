@@ -15,37 +15,37 @@ export class FeaturesComponent implements OnInit {
         title: 'Design',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex, ipsa minus odit perferendis quae quas sunt veniam.\n' +
           '  Consequatur ducimus enim esse natus necessitatibus odio odit rerum similique unde vel.',
-        picture: 'design.svg'
+        picture: 'design'
       },
       {
         title: 'Marketing',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex, ipsa minus odit perferendis quae quas sunt veniam.\n' +
           '  Consequatur ducimus enim esse natus necessitatibus odio odit rerum similique unde vel.',
-        picture: 'digital-marketing.svg'
+        picture: 'digital-marketing'
       },
       {
         title: 'Branding',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex, ipsa minus odit perferendis quae quas sunt veniam.\n' +
           '  Consequatur ducimus enim esse natus necessitatibus odio odit rerum similique unde vel.',
-        picture: 'branding.svg'
+        picture: 'branding'
       },
       {
         title: 'Development',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex, ipsa minus odit perferendis quae quas sunt veniam.\n' +
           '  Consequatur ducimus enim esse natus necessitatibus odio odit rerum similique unde vel.',
-        picture: 'devo.svg'
+        picture: 'devo'
       },
       {
         title: 'Photography',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex, ipsa minus odit perferendis quae quas sunt veniam.\n' +
           '  Consequatur ducimus enim esse natus necessitatibus odio odit rerum similique unde vel.',
-        picture: 'photo.svg'
+        picture: 'photo'
       },
       {
         title: 'Support',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex, ipsa minus odit perferendis quae quas sunt veniam.\n' +
           '  Consequatur ducimus enim esse natus necessitatibus odio odit rerum similique unde vel.',
-        picture: 'technical-support.svg'
+        picture: 'technical-support'
       }
     ];
   }

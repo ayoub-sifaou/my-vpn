@@ -17,16 +17,16 @@
     </div>
   </div>
   <div class="row list-item-features">
-    <div class="col-md-4 mb-5 item-feature" *ngFor="let feature of featuresData">
-      <div class="card border-0 border-radius-20">
+    <div class="col-md-4 mb-5 bg-white item-feature" *ngFor="let feature of featuresData">
+      <div class="card linear-gradient-primary border-0 border-radius-20">
         <div class="card-header pt-5 bg-transparent d-flex justify-content-center align-items-center border-0">
           <div class="image-feature">
-            <img src="assets/images/{{feature.picture}}" alt="" class="w-100 h-100" />
+            <span class="icon text-primary-4 icon-{{feature.picture}}"></span>
           </div>
         </div>
         <div class="card-body">
          <div class="title-item mb-3">
-            <span class="card-title rubik-medium fs-18 lh-18">
+            <span class="card-title text-darkerGray rubik-medium fs-18 lh-18">
             {{feature.title}}
           </span>
          </div>
